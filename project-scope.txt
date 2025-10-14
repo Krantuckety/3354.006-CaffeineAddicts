@@ -11,6 +11,7 @@
 		* 1.2.1 Option to enable/disable notifications based on assignment type
 		* 1.2.2 Send Notifications for assignments that are due soon
 		* 1.2.3 Daily progress notifications
+		* 1.2.4 Create custom reminders
 	* 1.3 Time Tracker
 		* 1.3.1 Track time to complete tasks
 		* 1.3.2 Provide data analytics for time taken
@@ -18,6 +19,7 @@
 		* 1.4.1 Show current grade status for a given course
 		* 1.4.2 Show current effect on GPA based on grades
 		* 1.4.3 Allow for setting of goals for grades
+		* 1.4.4 Find Completion Summary
 	* 1.5 Future Predictions
 		* 1.5.1 Provide expected GPA based on current grades
 		* 1.5.2 Provide calculation with speculative grades to see future effects
@@ -26,4 +28,8 @@
 		* 1.6.1 Allow for data to be taken realtime from blackboard
 	* 1.7 Galaxy Integration
 		* 1.7.1 Allow for data to be taken realtime form galaxy
+	* 1.8 Events
+		* 1.8.1 Create Events
+		* 1.8.2 View Events
+		* 1.8.3 Edit Events
 	
