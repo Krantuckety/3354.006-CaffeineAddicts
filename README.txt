@@ -86,32 +86,6 @@ This structure allows for scalability, maintainability, and integration with ext
 - Integrations: Blackboard API, Galaxy Portal
 - Version Control: Git + GitHub
 
-## Project Setup
-
-### Step 1: Clone Repository
-```
-git clone https://github.com/3354-team10/homework-planner.git
-cd homework-planner
-```
-
-### Step 2: Install Dependencies
-```
-npm install
-```
-or
-```
-pip install -r requirements.txt
-```
-
-### Step 3: Run Application
-```
-npm start
-```
-or
-```
-python manage.py runserver
-```
-
 ## Milestones
 | Deliverable | Description | Due Date |
 |--------------|--------------|-----------|
@@ -125,6 +99,6 @@ All content is for educational purposes only.
 
 ## Repository Information
 Repository Name: 3354-team10
-URL: (Add your actual GitHub repo link here)
-Instructor: Dr. [Instructor Name]
+URL: https://github.com/Krantuckety/3354.006-CaffeineAddicts
+Instructor: Dr. Barbara Maweu
 Course: SE/CS/CE 3354 – Software Engineering
