@@ -6,12 +6,12 @@ import static org.junit.Assert.*;
 
 public class EventTest
 {
-	// For the following getVar methods, the event object below is used
+	@Test
 	public void testGetEventVars()
 	{
 		Event e = new Event(
-				"Yoga Class",                 // title
-			    LocalDate.of(2025, 11, 20),      // date
+				"Yoga Class",                   // title
+			    LocalDate.of(2025, 11, 20),     // date
 			    14,                             // startHour
 			    30,                             // startMinute
 			    18,                             // endHour
@@ -19,7 +19,7 @@ public class EventTest
 			    "Social",                       // category
 			    false,                          // weekly recurrence
 			    "1 day before"                  // alert string
-				);
+		);
 		assertEquals("This is the title of event e.", "Yoga Class", e.getTitle());
 		assertEquals("This is the date of event e.", LocalDate.of(2025,  11, 20), e.getDate());
 		assertEquals("This is the start time of event e.", LocalTime.of(14, 30), e.getStartTime());
@@ -27,5 +27,21 @@ public class EventTest
 		assertEquals("This is the category of event e.", "Social", e.getCategory());
 		assertEquals("This states whether event e is weekly or not.", false, e.isWeekly());
 		assertEquals("This is the alert of event e.", "1 day before", e.getAlert());
+	}
+	
+	@Test
+	public void testInvalidTimes()
+	{
+		Event e = new Event(
+				"Gym",                 			// title
+			    LocalDate.of(2025, 11, 18),     // date
+			    21,                             // startHour
+			    0,                              // startMinute
+			    19,                             // endHour
+			    30,                             // endMinute
+			    "Personal",                     // category
+			    true,                           // weekly recurrence
+			    "2 hours before"                // alert string
+		);
 	}
 }
