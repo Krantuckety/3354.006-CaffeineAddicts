@@ -1,7 +1,8 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Event {
+public class Event 
+{
 
     private final String title;
     private final LocalDate date;
@@ -12,7 +13,8 @@ public class Event {
     private final String alert;
 
     // Allowed categories
-    private static final String[] VALID_CATEGORIES = {
+    private static final String[] VALID_CATEGORIES = 
+    {
             "Work", "Personal", "Social", "Educational"
     };
 
@@ -24,7 +26,8 @@ public class Event {
                  int endMinute,
                  String category,
                  boolean weekly,
-                 String alert) {
+                 String alert) 
+    {
 
         this.title = title;
         this.date = date;
@@ -33,20 +36,25 @@ public class Event {
         this.startTime = LocalTime.of(startHour, startMinute);
         this.endTime = LocalTime.of(endHour, endMinute);
 
-        if (!endTime.isAfter(startTime)) {
+        if (!endTime.isAfter(startTime)) 
+        {
             throw new IllegalArgumentException("End time must be after start time.");
         }
 
         // Validate category
         boolean valid = false;
-        for (String c : VALID_CATEGORIES) {
-            if (c.equalsIgnoreCase(category)) {
+        for (String c : VALID_CATEGORIES) 
+        {
+            if (c.equalsIgnoreCase(category)) 
+            {
                 valid = true;
                 break;
             }
         }
-        if (!valid) {
-            throw new IllegalArgumentException(
+        if (!valid) 
+        {
+            throw new IllegalArgumentException
+            (
                     "Invalid category. Must be one of: Work, Personal, Social, Educational."
             );
         }
@@ -56,15 +64,33 @@ public class Event {
         this.alert = alert;
     }
 
-    public LocalDate getDate() {
+    public LocalDate getTitle() 
+    {
+        return date;
+    }
+    
+    public LocalDate getDate() 
+    {
         return date;
     }
 
-    public LocalTime getStartTime() {
+    public LocalTime getStartTime() 
+    {
         return startTime;
     }
 
-    public LocalTime getEndTime() {
+    public LocalTime getEndTime() 
+    {
         return endTime;
+    }
+    
+    public getCategory() 
+    {
+    	return category;
+    }
+    
+    public boolean isWeekly() 
+    {
+    	return weekly;
     }
 }
