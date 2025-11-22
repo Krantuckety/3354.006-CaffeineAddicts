@@ -42,12 +42,12 @@ public class Calendar
                 && b.getStartTime().isBefore(a.getEndTime()));
     }
 
-    public scheduleAlert(Event e, int daysBefore)
+    /*public scheduleAlert(Event e, int daysBefore)
     {
     	String alertMsg = "Alert scheduled for \""
     			+ e.getTitle()
     			+ "\"" + daysBefore
     			+ " day(s) before this event starts.";
-    	alerts.add(msg);
+    	alerts.add(msg);*/
     }
 }
