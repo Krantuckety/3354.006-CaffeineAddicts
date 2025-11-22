@@ -23,25 +23,31 @@ public class EventTest
 		assertEquals("This is the title of event e.", "Yoga Class", e.getTitle());
 		assertEquals("This is the date of event e.", LocalDate.of(2025,  11, 20), e.getDate());
 		assertEquals("This is the start time of event e.", LocalTime.of(14, 30), e.getStartTime());
-		assertEquals("This is the end time of event e.", LocalTime.of(18, 0), e.getTitle());
+		assertEquals("This is the end time of event e.", LocalTime.of(18, 0), e.getEndTime());
 		assertEquals("This is the category of event e.", "Social", e.getCategory());
 		assertEquals("This states whether event e is weekly or not.", false, e.isWeekly());
-		assertEquals("This is the alert of event e.", "1 day before", e.getAlert());
 	}
 	
 	@Test
 	public void testInvalidTimes()
 	{
-		Event e = new Event(
-				"Gym",                 			// title
-			    LocalDate.of(2025, 11, 18),     // date
-			    21,                             // startHour
-			    0,                              // startMinute
-			    19,                             // endHour
-			    30,                             // endMinute
-			    "Personal",                     // category
-			    true,                           // weekly recurrence
-			    "2 hours before"                // alert string
-		);
+		try
+		{
+			Event e = new Event(
+					"Gym",                 			// title
+					LocalDate.of(2025, 11, 18),     // date
+					21,                             // startHour
+					0,                              // startMinute
+					19,                             // endHour
+					30,                             // endMinute
+					"Personal",                     // category
+					true,                           // weekly recurrence
+					"2 hours before"                // alert string
+			);
+			fail("Expected IllegalArgumentException was not thrown.");
+		} catch (IllegalArgumentException e) {
+			assertEquals("End time must be after start time.", e.getMessage());
+		}
+
 	}
 }

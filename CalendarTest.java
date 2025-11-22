@@ -3,21 +3,22 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 //Import JUnit libraries
 import org.junit.Test;
+import org.junit.Before;
 import static org.junit.Assert.*;
 
 public class CalendarTest
 {
 	private Calendar calendar;
 	
-	@BeforeEach
-	void prepCalendar()
+	@Before
+	public void prepCalendar()
 	{
 		calendar = new Calendar();	
 	}
 	
 	// Test 1
 	@Test
-	void testAddEventSuccess()
+	public void testAddEventSuccess()
 	{
 		assertEquals("This test checks to see if the calendar is empty", 0, calendar.getEvents().size());
 		Event e = new Event(
@@ -36,7 +37,7 @@ public class CalendarTest
 	
 	// Test 2
 	@Test
-	void testAdd2EventsSuccess()
+	public void testAdd2EventsSuccess()
 	{
 		assertEquals("This test checks to see if the calendar is empty", 0, calendar.getEvents().size());
 		Event e1 = new Event(
@@ -50,7 +51,7 @@ public class CalendarTest
 		);
 		
 		assertEquals("This test checks to see if the calendar is empty", 0, calendar.getEvents().size());
-		Event e1 = new Event(
+		Event e2 = new Event(
 				"Other Yoga Class",                   // title
 			    LocalDate.of(2025, 11, 22),     // date
 			    16, 0,                          // startTime
@@ -68,7 +69,7 @@ public class CalendarTest
 	
 	// Test 3
     @Test
-    void testAddOverlappingEvent() {
+    public void testAddOverlappingEvent() {
         Event e1 = new Event(
                 "Work Event",					// title
                 LocalDate.of(2025, 10, 11),		// date

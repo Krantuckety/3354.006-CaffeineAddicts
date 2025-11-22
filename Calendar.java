@@ -10,7 +10,7 @@ public class Calendar
     public Calendar() 
     {
         this.events = new ArrayList<>();
-        private ArrayList<String> alertsList = new ArrayList<>();
+        ArrayList<String> alertsList = new ArrayList<>();
     }
 
     // Add Event method
@@ -49,6 +49,7 @@ public class Calendar
     			+ e.getTitle()
     			+ "\"" + daysBefore
     			+ " day(s) before this event starts.";
-    	alerts.add(msg);*/
-    }
+    	alerts.add(msg);
+    }*/
 }
+

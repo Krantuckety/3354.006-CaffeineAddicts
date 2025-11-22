@@ -64,9 +64,9 @@ public class Event
         this.alert = alert;
     }
 
-    public LocalDate getTitle() 
+    public String getTitle()
     {
-        return date;
+        return title;
     }
     
     public LocalDate getDate() 
@@ -84,7 +84,7 @@ public class Event
         return endTime;
     }
     
-    public getCategory() 
+    public String getCategory()
     {
     	return category;
     }
